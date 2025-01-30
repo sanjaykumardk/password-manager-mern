@@ -1,0 +1,153 @@
+/* Header container styles */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2.5rem; /* Enhanced padding for better spacing */
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  box-shadow: 0 4px 6px rgba(255, 196, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: #ff9800;
+}
+
+/* Logo and title container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between logo and title */
+}
+
+.logo {
+  width: 48px; /* Slightly larger for better visibility */
+  height: 48px;
+}
+
+.app-title {
+  font-size: 1.8rem; /* Larger for emphasis */
+  font-family: 'Source Code Pro', monospace;
+  color: var(--primary-text);
+  margin: 0; /* Ensures no extra space below */
+}
+
+/* Navigation menu styling */
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* Increased spacing for navigation links */
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--primary-text);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px; /* Subtle rounding for hover effect */
+  padding: 0.5rem 1rem; /* Padding for better click target size */
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--secondary-bg);
+  background-color: var(--highlight-color); /* Accent background on hover */
+  transform: translateY(-2px); /* Lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+}
+
+/* Theme switcher wrapper */
+.theme-switcher-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 1.5rem; /* Space between navigation and switcher */
+}
+
+/* Theme switcher button styles */
+.theme-switcher-button {
+  background-color: var(--secondary-bg);
+  border: 2px solid var(--highlight-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--highlight-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-switcher-button:hover {
+  background-color: var(--highlight-color);
+  color: var(--secondary-bg);
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.theme-switcher-button:active {
+  transform: scale(0.95);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .header-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem; /* Compact padding for smaller screens */
+      text-align: center;
+  }
+
+  .logo-container {
+      justify-content: center;
+      gap: 0.5rem;
+  }
+
+  .navigation {
+      flex-direction: column;
+      gap: 1rem;
+  }
+
+  .theme-switcher-wrapper {
+      margin-left: 0;
+      margin-top: 1rem; /* Stack switcher below nav links */
+  }
+}
+
+/* Accent Theme Colors */
+:root {
+  --highlight-color-light: #007bff;
+  --highlight-color-dark: #ff9800;
+  --header-bg-light: #ffffff;
+  --header-bg-dark: #2b2f38;
+  --header-text-light: #2b2b2b;
+  --header-text-dark: #e8e8e8;
+  --header-link-light: #333;
+  --header-link-dark: #ddd;
+}
+
+/* Light Theme */
+[data-theme='light'] {
+  --header-bg-color: var(--header-bg-light);
+  --header-text-color: var(--header-text-light);
+  --header-link-color: var(--header-link-light);
+  --accent-color: var(--highlight-color-light);
+}
+
+/* Dark Theme */
+[data-theme='dark'] {
+  --header-bg-color: var(--header-bg-dark);
+  --header-text-color: var(--header-text-dark);
+  --header-link-color: var(--header-link-dark);
+  --accent-color: var(--highlight-color-dark);
+}

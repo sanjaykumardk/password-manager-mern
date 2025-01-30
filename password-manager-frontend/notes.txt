@@ -1,0 +1,32 @@
+password-manager/
+├── index.html              # Entry point for the Vite application.
+├── vite.config.js          # Vite configuration file.
+├── package.json            # Project metadata and dependencies.
+├── node_modules/           # Installed npm packages.
+├── src/
+│   ├── App.jsx             # Main application logic and component integration.
+│   ├── assets/
+│   │   └── react.svg       # Favicon or other assets for the app.
+│   ├── components/
+│   │   ├── AddPassword.jsx # Component to add new passwords.
+│   │   ├── Header.jsx      # Header section for navigation and branding.
+│   │   ├── PasswordList.jsx# List of saved passwords.
+│   │   ├── RandomPasswordGenerator.jsx # Random password generator.
+│   │   ├── ThemeSwitcher.jsx # Theme toggle functionality.
+│   │   └── Footer.jsx      # Footer section for additional information.
+│   ├── index.css           # Global styles for the entire app.
+│   ├── main.jsx            # Application entry point.
+│   ├── pages/
+│   │   └── Home.jsx        # Landing page component.
+│   ├── styles/
+│   │   ├── AddPassword.css # Styles for AddPassword component.
+│   │   ├── App.css         # Global and layout styles.
+│   │   ├── Header.css      # Header-specific styles.
+│   │   ├── Home.css        # Home page-specific styles.
+│   │   ├── PasswordList.css# Password list styles.
+│   │   ├── RandomPasswordGenerator.css # Styles for password generator.
+│   │   ├── ThemeSwither.css # Styles for theme switcher.
+│   │   └── Footer.css      # Styles for footer.
+│   └── utils/
+│       └── crypto.js       # Utility functions for encryption and hashing.
+└── notes.txt               # Notes about the project structure.

@@ -1,0 +1,147 @@
+/* Footer container styling */
+.footer-container {
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
+  padding: 2.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  text-align: center;
+  border-top: 2px solid var(--footer-border-color);
+  box-shadow: 0 -4px 10px rgba(255, 213, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Contact section */
+.footer-contact {
+  flex: 1;
+  text-align: center;
+  margin-right: 2rem;
+  min-width: 250px;
+  box-sizing: border-box;
+}
+
+.footer-contact p {
+  margin: 0.6rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.footer-contact strong {
+  font-size: 1.1rem;
+  color: var(--footer-heading-color);
+}
+
+/* Follow Me section */
+.footer-follow {
+  
+  flex: 1;
+  text-align: right;
+  min-width: 250px;
+  box-sizing: border-box;
+}
+
+.footer-follow p {
+  text-align: center;
+  /* margin-right: 4rem; */
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--footer-heading-color);
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-icons a {
+  color: var(--footer-icon-color);
+  background-color: var(--footer-icon-bg);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  background-color: var(--footer-icon-hover-bg);
+  color: var(--footer-icon-hover-color);
+  transform: scale(1.2);
+}
+
+/* Copyright section */
+.footer-copyright {
+  font-size: 0.9rem;
+  color: var(--footer-copyright-color);
+  margin-top: 2rem;
+  font-weight: lighter;
+  text-align: center;
+  width: 100%;
+}
+
+/* Theme-specific colors */
+[data-theme="dark"] {
+  --footer-bg-color: #1e1e1e;
+  --footer-text-color: #e6e6e6;
+  --footer-heading-color: #ffffff;
+  --footer-icon-color: #e6e6e6;
+  --footer-icon-bg: #333333;
+  --footer-icon-hover-bg: #ff9800;
+  --footer-icon-hover-color: #ffffff;
+  --footer-copyright-color: #aaaaaa;
+  --footer-border-color: #333333;
+}
+
+[data-theme="light"] {
+  --footer-bg-color: #f9f9f9;
+  --footer-text-color: #333333;
+  --footer-heading-color: #000000;
+  --footer-icon-color: #333333;
+  --footer-icon-bg: #e6e6e6;
+  --footer-icon-hover-bg: #007bff;
+  --footer-icon-hover-color: #ffffff;
+  --footer-copyright-color: #666666;
+  --footer-border-color: #dddddd;
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+  }
+
+  .footer-contact,
+  .footer-follow {
+      text-align: center;
+      margin-bottom: 1.5rem;
+  }
+
+  .footer-icons a {
+      font-size: 1.4rem;
+      width: 45px;
+      height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-contact p,
+  .footer-follow p {
+      font-size: 0.95rem;
+  }
+
+  .footer-icons a {
+      font-size: 1.2rem;
+      width: 40px;
+      height: 40px;
+  }
+}

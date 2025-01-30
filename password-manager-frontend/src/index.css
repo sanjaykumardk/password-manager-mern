@@ -1,0 +1,59 @@
+/* Global Styles */
+:root {
+  --font-family: 'Source Code Pro', monospace;
+  --primary-color: #4caf50;
+  --secondary-color: #303f9f;
+  --background-dark: #121212;
+  --background-light: #ffffff;
+  --text-dark: #ffffff;
+  --text-light: #000000;
+}
+
+/* Theme Variables */
+[data-theme='dark'] {
+  --background-color: var(--background-dark);
+  --text-color: var(--text-dark);
+}
+
+[data-theme='light'] {
+  --background-color: var(--background-light);
+  --text-color: var(--text-light);
+}
+
+/* Reset Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Container styles */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  padding: 16px;
+}
+
+.random-password-generator {
+  padding: 16px;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border-radius: 8px;
+  margin: 16px auto;
+  max-width: 400px;
+}
+
+/* Utility classes */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
